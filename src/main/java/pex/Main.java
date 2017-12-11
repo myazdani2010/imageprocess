@@ -16,9 +16,8 @@ import java.awt.image.BufferedImage;
  *      2-2: Resize the image to maximum 200X200
  *      2-3: Quantize the image using k-mean clustering where k=16, to convert the image to 16 color classes
  *      2-4: Count pixels from quantized image and find 3 dominant colors excluding White
- *      2-5: change the append the 3 colors to the url String in th array.
+ *      2-5: Append the 3 dominant colors to the url String in th array.
  * 3: Save the final result into the CSV file
- *
  *
  * @author Mohammad.Yazdani
  */
