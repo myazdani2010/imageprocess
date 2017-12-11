@@ -32,7 +32,7 @@ public class Main {
         StringBuilder[] urls = FileUtils.readAllLines("urls.txt", false);
         System.out.println("Processing " + urls.length + " images");
 
-        for (int i=0 ; i<5  ; i++){
+        for (int i=0 ; i<urls.length  ; i++){
             System.out.println("------------------------------");
             System.out.println(i + "- " + urls[i]);
 
