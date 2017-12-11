@@ -39,7 +39,6 @@ public class Main {
             BufferedImage image = ImageUtils.getImageFromUrl(urls[i]);
             image = ImageUtils.quantize(image);
             String[] colors = ImageUtils.getDominantColors(image, 3, true);
-//            urls[i] = urls[i] + ";" +String.join(";", colors);
             urls[i].append(";" +String.join(";", colors));
         }
         System.out.println("------------------------------");
