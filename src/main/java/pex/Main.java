@@ -31,13 +31,15 @@ public class Main {
         StringBuilder[] urls = FileUtils.readAllLines("urls.txt", false);
         System.out.println("Processing " + urls.length + " images");
 
-        for (int i=0 ; i<urls.length  ; i++){
+        for (int i=0 ; i<urls.length ; i++){
             System.out.println("------------------------------");
             System.out.println(i + "- " + urls[i]);
 
             BufferedImage image = ImageUtils.getImageFromUrl(urls[i]);
-            image = ImageUtils.quantize(image);
-            String[] colors = ImageUtils.getDominantColors(image, 3, true);
+            if(image == null)
+                continue;
+
+            String[] colors = ImageUtils.get3DominantColors(image, true);
             urls[i].append(";" +String.join(";", colors));
         }
         System.out.println("------------------------------");
